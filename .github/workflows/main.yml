@@ -33,12 +33,12 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Github actions for yarn
-        uses: borales/actions-yarn@v2.3.0
+        - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install # will run `yarn install` command
-          
-      - name: creating build
-        run: yarn build
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: build # will run `yarn build` command
         
       - name: installing surge
         run: npm install -g surge

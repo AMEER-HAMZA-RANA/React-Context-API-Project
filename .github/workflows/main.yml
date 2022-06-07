@@ -41,6 +41,11 @@ jobs:
         uses: borales/actions-yarn@v2.3.0
         with: 
           cmd: build
+
+      - name: creating build
+        uses: borales/actions-yarn@v2.3.0
+        with: 
+          cmd: test
         
       - name: installing surge
         run: npm install -g surge

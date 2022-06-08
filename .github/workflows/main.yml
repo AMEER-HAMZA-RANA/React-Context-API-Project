@@ -32,12 +32,12 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Github actions for yarn
-        uses: Borales/actions-yarn@v2.1.0
+        uses: Borales/actions-yarn@latest
         with:
           cmd: install # will run `yarn install` command
           
       - name: yarn build
-        uses: Borales/actions-yarn@v2.1.0
+        uses: Borales/actions-yarn@latest
         with:
           cmd: build
         
@@ -45,4 +45,4 @@ jobs:
         run: npm install -g surge
         
       - name: deploying on surge
-        run: surge ./ demo-react-proj-a.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./ demo-react-proj-a.surge.sh --token ${{ secrets.SURGE_TOKEN }}

@@ -2,9 +2,6 @@ import React, {useContext} from 'react';
 import AppTheme from './Colors';
 import ThemeContext from './ThemeContext';
 
-
-// const mainStyle =
-
 const Main = () => {
   const theme = useContext(ThemeContext)[0];
   const currentTheme = AppTheme[theme];

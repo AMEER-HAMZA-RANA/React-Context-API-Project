@@ -1,11 +1,22 @@
-import React from "react";
-import "./App.css";
+import React, { useState } from "react";
+import ThemeContext from "./ThemeContext";
+import Header from "./Header";
+import Main from "./Main";
+
+
 
 function App() {
+  
+  const themeHook = useState("light");
+  // const themeHook = "light";
   return (
-    <div>
-      <h1>hi worldee</h1>
-    </div>
+    <ThemeContext.Provider value={themeHook}>
+      <div>
+        <Header />
+        <p style={{ textAlign: "center" }}>{themeHook} State</p>
+        <Main />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
